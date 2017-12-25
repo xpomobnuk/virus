@@ -1,0 +1,91 @@
+@import "vars"
+
+*
+	box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: $default-color-placeholder
+	font-family: $default-font
+	font-size: 12px
+	font-weight: normal
+
+*:-moz-placeholder
+	color: $default-color-placeholder
+	font-family: $default-font
+	font-size: 12px
+	font-weight: normal
+
+*::-moz-placeholder
+	color: $default-color-placeholder
+	font-family: $default-font
+	font-size: 12px
+	font-weight: normal
+
+*:-ms-input-placeholder
+	color: $default-color-placeholder
+	font-family: $default-font
+	font-size: 12px
+	font-weight: normal
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: $default-color
+	border: 1px solid #f3101a
+
+body input:required:valid,
+body textarea:required:valid
+	color: $default-color
+	border: 1px solid #68dc7d
+
+html, body
+	height: 100%
+
+body
+	position: relative
+	width: 100%
+	min-width: 320px
+	margin: 0 auto
+	line-height: 1.4
+	font-size: 15px
+	color: $default-color
+	font-family: $default-font
+	background-color: #fff
+	overflow-x: hidden
+
+
+/* === {FOOTER ALWAYS AT BOTTOM} === */
+// .mainWrapper
+// 	display: -webkit-flex
+// 	display: -moz-flex
+// 	display: -ms-flex
+// 	display: -o-flex
+// 	display: flex
+// 	flex-direction: column
+// 	min-height: 100vh
+// 	height: 100%
+
+
+
+.main_head 
+	min-height: 605px
+	position: relative
+	overflow: hidden
+
+
+.mainContent
+	flex: auto
+
+.mainFooter
+	position: relative
+	display: block
+	width: 100%
+
+.logo
+	background: url("../img/logo.png") center no-repeat
+	height: 46px
+
+.top_mnu 
+	ul
+		list-style-type: none
+		li 
+			display: inline-block

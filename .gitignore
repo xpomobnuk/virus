@@ -1,0 +1,6 @@
+/node_modules/
+/dist/
+/.git/
+/**/Thumbs.db
+/.sublime-gulp.cache
+/sublime-gulp.log
