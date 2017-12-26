@@ -151,15 +151,17 @@
 		font-family: "PTSans", sans-serif
 		margin-bottom: 40px
 		margin-top: 70px
-	.section_title
-		font-size: 55px
-		font-family: "PTSans", sans-serif
-		font-weight: bold
-		color: #de534b
-		word-wrap: break-word
+.section_title
+	font-size: 55px
+	font-family: "PTSans", sans-serif
+	font-weight: bold
+	color: rgba(255, 0, 0, 0.8)
+	// color: #de534b
+	word-wrap: break-word
 
 
 .antivirus_gid_content
+	word-wrap: break-word
 	background-image: url("../img/gid_fon.png")
 	background-position: center
 	background-repeat: no-repeat
@@ -169,6 +171,8 @@
 	a 
 		font-size: 35px
 		padding: 15px 80px
+		&:hover
+			text-decoration: none
 	p
 		font-family: "PTSans", sans-serif
 		font-size: 35px
@@ -194,4 +198,123 @@
 		text-shadow: 1px 2px 0px #476868
 		
 .main_color
-	color: #df5d4a
+	color: rgba(255, 0, 0, 0.8)
+
+
+.popular_vote
+	text-align: center
+	.vote_text_wrap2
+		max-width: 746px
+		width: 100%
+		background-color: #f7f7ef
+		height: 200px
+		position: absolute
+	.section_title
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			width: 44px
+			height: 29px
+			background-image: url("../img/shape.png")
+			background-position: center
+			background-repeat: no-repeat
+			right: -55px
+			top: 27px
+	.vote_text
+		text-align: right
+		position: relative
+		.vote_text_wrap
+			height: 192px
+			p
+				float: left
+				font-family: "PTSans", sans-serif
+				font-style: italic
+				font-size: 22px
+				margin-top: 40px
+		.vote_fon
+			background-image: url("../img/vote_fon2.png")
+			background-position: center
+			background-repeat: no-repeat
+			height: 257px
+			position: absolute
+			margin: 0 auto
+			width: 100%
+			top: -4px
+
+	
+
+
+
+
+
+
+
+
+
+
+.mainFooter
+	background-color: #373b3f
+	color: #fff
+	font-family: "PTSans", sans-serif
+	font-size: 20px
+	.mainFooter_wrap
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		justify-content: space-between
+		padding: 21px
+		.logo_mnz
+			background-image: url("../img/logo_MNZ.png")
+			width: 144px
+			height: 67px
+			background-size: cover
+			margin-right: 25px
+		.mail
+			img
+				width: 38px
+				height: 31px
+				margin-right: 14px
+		.main_page
+			color: #fff
+			border: 1px solid #fff
+			border-radius: 50px
+			padding: 9px 27px
+			margin: 0 34px
+			transition: .3s ease
+			&:hover
+				text-decoration: none
+				color: #373b3f
+				background-color: #fff
+		.phone
+			margin-right: 28px
+			img
+				margin-right: 14px
+				width: 33px
+				height: 31px
+		.social
+			a
+				border-color: #fff
+				border-radius: 50%
+				font-size: 22px
+				color: #fff
+				display: flex
+				width: 50px
+				height: 50px
+				&:hover
+					background-color: #fff
+					i
+						color: #373b3f
+					.fa-vkontakte
+						&:before
+							background-image: url(../img/social/vk4.png)
+				.fa-vkontakte
+					&:before
+						content: ""
+						position: absolute
+						background-image: url(../img/social/vk5.png)
+						background-position: center
+						background-repeat: no-repeat 
+						width: 50px
+						height: 50px
+						margin: auto
