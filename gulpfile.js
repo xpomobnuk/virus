@@ -46,7 +46,8 @@ gulp.task('custom-js', function() {
 
 gulp.task('libs-js', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery-1.11.2.min.js'
+		'app/libs/jquery/dist/jquery-1.11.2.min.js',
+		'app/libs/select2/dist/select2.min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(gulp.dest('app/js'))

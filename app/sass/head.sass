@@ -72,6 +72,9 @@ body
 	min-height: 605px
 	position: relative
 	overflow: hidden
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
 
 
 .mainContent
@@ -123,17 +126,31 @@ body
 					&:after
 						opacity: 1
 
+.top_mnu_wrap
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+
 
 .social
 	display: inline-block
 	ul
 		list-style-type: none
 		padding: 0
+		display: flex
 		li 
 			display: inline-block
 			padding-right: 5px
 			&:last-child
 				padding-right: 8px
+			&:first-child
+				a
+					border: none
+					&:hover
+						.fa-vkontakte
+							&:before
+								background: url("../img/social/vk3.png") center no-repeat
 			a
 				border: 2px solid #82b4b5
 				border-radius: 50%
@@ -142,12 +159,11 @@ body
 				display: flex
 				width: 50px
 				height: 50px
-				transition: all .5s ease
 				&:hover
 					text-decoration: none
 					background-color: #82b4b5
 					i
-						color: #fff
+						color: #fff	
 				i
 					margin: auto
 
@@ -158,38 +174,95 @@ body
 					// font-size: 22px
 					// color: #82b4b5
 
+.fa-vkontakte
+	width: 50px
+	height: 50px
+	&:before
+		content: ""
+		position: absolute
+		background: url("../img/social/vk.png") center no-repeat
+		width: 50px
+		height: 50px
+		margin: auto
+
 .main_button
-	display: inline-block
-	transition: all .3s ease
-	padding: 11px 27px
-	text-align: center
-	font-family: "PTSans", sans-serif
-	font-weight: bold
-	font-size: 20px
 	background-color: #df5c48
 	color: #fff
 	border-radius: 50px
 	text-shadow: 1px 2px 0px #b62d20
-	&:hover
-		text-decoration: none
+	font-family: "PTSans", sans-serif
+	transition: all .3s ease
+	text-align: center
+
+
+
+.top_mnu_wrap
+	.main_button
+		display: inline-block
+		padding: 11px 27px
+		font-weight: bold
+		font-size: 20px
+		&:hover
+			text-decoration: none
 
 
 .header_wrap
-	background: url("../img/header_fon.png") center no-repeat
-	height: 492px
+	text-align: center
+	height: 397px
+	img
+		max-width: 100%
 
 .header_content
-	position: absolute
-	height: 284px
+	min-height: 50px
 	width: 100%
 	bottom: 0
+	background-color: #373b3f
+	height: 100%
 
 .virus
 	position: relative
-	.virus_text
+	text-align: center
+	&:before
+		content: ""
 		position: absolute
-		height: 130px
-		background-color: #373b3f
 		width: 100%
-		
+		background: url(../img/left_virus.png) center no-repeat
+		max-width: 147px
+		height: 147px
+		left: 3px
+		top: -126px
+	&:after
+		content: ""
+		position: absolute
+		width: 100%
+		background: url(../img/right_virus.png) center no-repeat
+		max-width: 135px
+		height: 193px
+		right: -16px
+		top: -150px
+	.virus_text
+		position: relative
+		img
+			width: 100%
+			max-width: 1122px
+			margin: auto
+			padding: 8px 0
+
+
+.mothers_choice
+	position: absolute
+	background: url(../img/mothers_choice.png) center no-repeat
+	width: 100%
+	height: 100%
+	max-width: 331px
+	max-height: 79px
+	right: 90px
+	top: -79px
+	font-size: 55px
+	color: #fff
+	font-family: "NautilusPompilius", sans-serif
+	span
+		display: block
+		margin-top: 10px
+		font-size: 50px
 

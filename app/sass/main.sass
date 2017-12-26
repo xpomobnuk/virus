@@ -1,1 +1,197 @@
 @import "vars"
+
+
+.main_form
+	max-width: 566px
+	margin: 0 auto
+	.clearfix
+		margin-bottom: 30px
+	label
+		// border: 2px solid #444
+		// border-radius: 50px
+		// display: block
+		span
+			font-family: "PTSans", sans-serif
+			font-size: 35px
+		&.age
+			span
+				line-height: 1
+				padding: 21px 41px
+				display: inline-block
+				border-right: 1px solid #444
+
+
+.choose_medicine
+	padding-top: 36px
+	.main_button
+		display: block
+		width: 100%
+		font-size: 35px
+		padding: 14px 0
+		&:hover
+			text-decoration: none
+
+
+
+// Select2
+
+
+.simpleSelect
+	display: flex
+	align-items: center
+	border: 2px solid #000
+	border-radius: 150px
+	background-color: #999
+	label
+		font-size: 33px
+		color: #444
+		border-right: 1px solid #000
+		padding: 15px 40px
+		background-color: #fff
+		-webkit-border-radius: 150px 0 0 150px
+		border-radius: 150px 0 0 150px
+
+
+
+.select2-container
+	flex: auto
+	margin-right: 28px
+	// padding-top: 14px
+	padding-top: 2px
+	padding-bottom: 11px
+	color: #fff
+	font-size: 21px
+	padding-left: 20px
+	transform: translateX(-0.5px)
+
+.select2-selection__clear
+	display: none
+
+.select2-dropdown
+	flex: auto
+	margin-right: 20px
+	padding-top: 15px
+	padding-top: 0
+	padding-bottom: 10px
+	color: black
+	border-color: #000
+
+.select2
+	padding: 0
+	overflow: hidden
+
+.select2-container .select2-selection--single
+	display: block
+	height: 100%
+
+.select2-selection
+	outline: none
+	padding: 24px
+
+.select2-container--default
+	.select2-selection--single .select2-selection__arrow
+		top: 50%
+		transform: translateY(-50%)
+	.select2-results__option
+		padding: 18px 10px
+		border-bottom: 1px solid black
+	.select2-results__option .select2-results__option
+		border-top: 1px solid #000
+		border-bottom: 1px solid black
+		padding: 18px 10px
+	.select2-selection--single
+		.select2-selection__placeholder
+			color: #fff
+		background-color: transparent
+		border: none
+
+.select2-selection__arrow i
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+
+.select2-container--default
+	.select2-results__option[aria-selected=true]
+		background-color: #009a6e
+	.select2-results__option--highlighted[aria-selected]
+		background-color: #ccc
+
+
+.select_arrow_down
+	background-image: url("../img/arrow.png")
+	background-position: center
+	background-repeat: no-repeat
+	width: 22px
+	height: 21px
+
+
+.select2-container--default .select2-results__option[aria-selected=true]
+	background-color: #b1d8d8
+
+.select2-container--default .select2-results__group
+	background-color: #999
+	color: #fff
+	padding: 18px 10px
+
+.select2-container--default .select2-selection--single .select2-selection__rendered
+	color: #fff
+
+.select2-container--default .select2-results__option .select2-results__option
+	padding: 18px 10px
+
+
+.antivirus_gid
+	text-align: center
+	background-color: #f7f7ef
+
+.antivirus_gid
+	h1
+		font-size: 40px
+		font-family: "PTSans", sans-serif
+		margin-bottom: 40px
+		margin-top: 70px
+	.section_title
+		font-size: 55px
+		font-family: "PTSans", sans-serif
+		font-weight: bold
+		color: #de534b
+		word-wrap: break-word
+
+
+.antivirus_gid_content
+	background-image: url("../img/gid_fon.png")
+	background-position: center
+	background-repeat: no-repeat
+	max-width: 100%
+	height: 645px
+	margin-bottom: 48px
+	a 
+		font-size: 35px
+		padding: 15px 80px
+	p
+		font-family: "PTSans", sans-serif
+		font-size: 35px
+		&:first-child
+			text-transform: uppercase
+
+
+.antivirus_gid_content_wrap
+	max-width: 660px
+	padding: 17px 32px
+	text-align: left
+
+
+.notice
+	text-transform: uppercase
+	background-color: #87adad
+	p 
+		color: #fff
+		font-family: "RobotoCondensed-Regular", sans-serif
+		font-size: 35px
+		padding: 16px
+		margin: 0
+		text-shadow: 1px 2px 0px #476868
+		
+.main_color
+	color: #df5d4a
