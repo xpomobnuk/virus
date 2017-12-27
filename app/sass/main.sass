@@ -140,6 +140,9 @@
 .select2-container--default .select2-results__option .select2-results__option
 	padding: 18px 10px
 
+.select2-container--default .select2-results>.select2-results__options 
+	max-height: 300px 
+
 
 .antivirus_gid
 	text-align: center
@@ -155,8 +158,7 @@
 	font-size: 55px
 	font-family: "PTSans", sans-serif
 	font-weight: bold
-	color: rgba(255, 0, 0, 0.8)
-	// color: #de534b
+	color: #de534b
 	word-wrap: break-word
 
 
@@ -170,7 +172,11 @@
 	margin-bottom: 48px
 	a 
 		font-size: 35px
-		padding: 15px 80px
+		max-width: 565px
+		width: 100%
+		display: inline-block
+		border: 2px solid #fff
+		padding: 12px 15px
 		&:hover
 			text-decoration: none
 	p
@@ -196,16 +202,16 @@
 		padding: 16px
 		margin: 0
 		text-shadow: 1px 2px 0px #476868
+		text-align: center
 		
 .main_color
-	color: rgba(255, 0, 0, 0.8)
+	color: #de534b
 
 
 .popular_vote
 	text-align: center
 	.vote_text_wrap2
-		max-width: 746px
-		width: 100%
+		width: 41%
 		background-color: #f7f7ef
 		height: 200px
 		position: absolute
@@ -225,7 +231,7 @@
 		text-align: right
 		position: relative
 		.vote_text_wrap
-			height: 192px
+			height: 260px
 			p
 				float: left
 				font-family: "PTSans", sans-serif
@@ -233,7 +239,7 @@
 				font-size: 22px
 				margin-top: 40px
 		.vote_fon
-			background-image: url("../img/vote_fon2.png")
+			background-image: url("../img/vote_fon.png")
 			background-position: center
 			background-repeat: no-repeat
 			height: 257px
@@ -244,20 +250,246 @@
 
 	
 
+.tablet_wrap
+	background-image: url("../img/tablet.png")
+	background-position: center
+	background-repeat: no-repeat
+	height: 416px
+	margin-top: 44px
+	margin-left: 42px
+
+
+.main_vote_text
+	text-align: left
+	position: relative
+	font-family: "PTSans", sans-serif
+	margin-top: 50px
+	padding-left: 18px
+	h3 
+		border-bottom: 1px solid #373b3f
+		font-weight: bold
+		text-transform: uppercase
+		margin: 0
+		padding-bottom: 18px
+		font-size: 36px
+		margin-bottom: 12px
+	p 
+		margin: 0
+		font-size: 35px
+		line-height: 1.8
+	.main_button
+		max-width: 565px
+		width: 100%
+		display: inline-block
+		padding: 14px 15px
+		margin-top: 33px
+		border: none
+		font-family: "PTSans", sans-serif
+		font-size: 33px
+		margin-bottom: 30px
+		
+
+.radio
+	vertical-align: top
+	width: 17px
+	height: 17px
+	margin: 0 3px 0 0
+	+ label
+		cursor: pointer
+	&:not(checked)
+		position: absolute
+		opacity: 0
+		+ label
+			position: relative
+			display: block
+			&:before
+				content: ""
+				position: absolute
+				top: 10px
+				right: 0
+				width: 41px
+				height: 41px
+				border-radius: 50%
+				background: #de534b
+			&:after
+				// content: "\f00c"
+				content: ""
+				// font-family: "FontAwesome", sans-serif
+				background-image: url("../img/checked.png")
+				background-position: center
+				background-repeat: no-repeat
+				position: absolute
+				color: #fff
+				top: 23px
+				right: 7px
+				width: 23px
+				height: 17px
+				border-radius: 50%
+				opacity: 0
+				transition: all .2s
+	&:checked + label:after
+		opacity: 1
 
 
 
+.recommended_pills
+	.recommended_pills_wrap
+		hr 
+			border-color: #373b3f
+			width: 94%
+			float: left
+			margin-top: 8px
+		p 
+			font-family: "PTSans", sans-serif
+			font-size: 29px
+			line-height: 33px
 
 
 
+.medicine_item
+	p
+		display: inline-block
+		font-family: "PTSans", sans-serif
+		font-weight: bold
+		font-size: 30px
+		text-transform: uppercase
+	a 
+		display: inline-block
+		&:hover
+			text-decoration: none
+
+
+.custom_container
+	width: 1485px
+	margin-left: auto
+	// border: 1px solid black
+	
 
 
 
+.widget
+	background-color: #f1c741
+	// display: flex
+	.widget_text_wrap
+		padding: 71px 0
+		position: relative
+		.widget_button
+			padding: 0px 45px
+			position: absolute
+			width: 50%
+			top: 0
+			transform: translateY(-50%)
+		.main_button
+			font-family: "PTSans", sans-serif
+			font-size: 35px
+			// padding: 15px 126px
+			border: 2px solid #fff
+		.left_top_button	
+			left: -27px
+			a 
+				display: block
+				padding: 10px
+			&:hover
+				.main_button
+					text-decoration: none
+		.right_top_button
+			right: -27px
+			a 
+				display: block
+				padding: 10px
+			&:hover
+				.main_button
+					text-decoration: none
+		&:after
+			content: ""
+		h1 
+			font-size: 55px
+			font-family: "Roboto", sans-serif
+			font-weight: normal
+			text-align: center
+			margin-bottom: 10px
+			margin-top: 0
+			word-wrap: break-word
+		.widget_social_wrap
+			font-family: "Roboto", sans-serif
+			font-weight: 500
+			font-size: 27px
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+			p 
+				margin: 0
+			ul
+				margin: 0
+	.social_widget
+		display: inline-block
+		ul 
+			display: flex
+			list-style-type: none
+			padding-left: 20px
+			flex-wrap: wrap
+			li 
+				display: inline-block
+				padding-right: 10px
+				a 
+					border: 2px solid #373b3f
+					border-radius: 50%
+					font-size: 22px
+					color: #373b3f
+					display: flex
+					width: 50px
+					height: 50px
+					i
+						margin: auto
+						font-size: 25px
+					&:hover
+							background-color: #373b3f
+							i
+								color: #f1c741
+
+							.fa-vkontakte
+								&:before
+									background-image: url("../img/widget_social/widget_vk2.png")
+									background-position: center
+									background-repeat: no-repeat
+							.fa-telegramo
+								&:before
+									background-image: url("../img/widget_social/widget_telegram2.png")
+									background-position: center
+									background-repeat: no-repeat
+
+					.fa-vkontakte
+						width: 50px
+						height: 50px
+						&:before
+							content: ""
+							position: absolute
+							background-image: url("../img/widget_social/widget_vk.png")
+							background-position: center
+							background-repeat: no-repeat
+							width: 48px
+							height: 48px
+							margin: auto
+							background-size: cover
+					.fa-telegramo
+						width: 50px
+						height: 50px
+						&:before
+							content: ""
+							position: absolute
+							background-image: url("../img/widget_social/widget_telegram.png")
+							background-position: center
+							background-repeat: no-repeat
+							width: 47px
+							height: 47px
+							margin: auto
+							background-size: cover
 .mainFooter
 	background-color: #373b3f
 	color: #fff
 	font-family: "PTSans", sans-serif
 	font-size: 20px
+	margin-top: 30px
 	.mainFooter_wrap
 		display: flex
 		align-items: center
