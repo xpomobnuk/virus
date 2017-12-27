@@ -315,7 +315,7 @@
 				// content: "\f00c"
 				content: ""
 				// font-family: "FontAwesome", sans-serif
-				background-image: url("../img/checked.png")
+				background-image: url("../img/cheked.png")
 				background-position: center
 				background-repeat: no-repeat
 				position: absolute
@@ -347,20 +347,72 @@
 
 
 .medicine_item
-	p
+	transition: all .3s ease
+	cursor: pointer
+	&:hover
+		.item
+			transition: all .3s ease
+			a
+				transition: .3s ease
+				text-decoration: underline
+			&:after
+				background-image: url("../img/cheked3.png")
+		.scheme
+			a
+				background-color: #de534b
+				color: #fff
+				text-shadow: 1px 2px 0px #b62d20
+				padding: 8px 0
+				border-color: #de534b
+
+
+	.item
+		transition: .3s ease
 		display: inline-block
-		font-family: "PTSans", sans-serif
-		font-weight: bold
-		font-size: 30px
-		text-transform: uppercase
-	a 
+		width: 43%
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			background-image: url("../img/cheked2.png")
+			background-position: center
+			background-repeat: no-repeat
+			width: 28px
+			height: 21px
+			top: 0 
+			bottom: 0 
+			right: 0
+			margin: auto
+		p
+			margin: 5px 0
+			display: inline-block
+			font-family: "PTSans", sans-serif
+			font-weight: bold
+			font-size: 30px
+			text-transform: uppercase
+			a
+				color: #353535
+	.scheme
+		transition: all .3s ease
 		display: inline-block
-		&:hover
-			text-decoration: none
+		width: 49%
+		text-align: center
+		a 
+			display: inline-block
+			font-family: "PTSans", sans-serif
+			font-size: 20px
+			color: #353535
+			border: 1px solid #353535
+			border-radius: 50px
+			width: 181px
+			text-align: center
+			padding: 8px 0
+			&:hover
+				text-decoration: none
 
 
 .custom_container
-	width: 1485px
+	width: 1570px
 	margin-left: auto
 	// border: 1px solid black
 	
