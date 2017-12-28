@@ -164,12 +164,17 @@
 
 .antivirus_gid_content
 	word-wrap: break-word
-	background-image: url("../img/gid_fon.png")
-	background-position: center
-	background-repeat: no-repeat
-	max-width: 100%
-	height: 645px
+	background-color: #FFF
+	max-width: 1142px
+	margin: 0 auto
 	margin-bottom: 48px
+	position: relative
+	img
+		width: 100%
+	// @media only screen and (max-width : 991px)
+	.antivirus_container
+		margin-left: -15px
+		margin-right: -15px
 	a 
 		font-size: 35px
 		max-width: 565px
@@ -177,6 +182,12 @@
 		display: inline-block
 		border: 2px solid #fff
 		padding: 12px 15px
+		position: absolute
+		bottom: 68px
+		left: 0
+		margin: auto
+		right: 0
+
 		&:hover
 			text-decoration: none
 	p
@@ -190,6 +201,8 @@
 	max-width: 660px
 	padding: 17px 32px
 	text-align: left
+
+
 
 
 .notice
@@ -215,8 +228,17 @@
 		background-color: #f7f7ef
 		height: 200px
 		position: absolute
+		@media only screen and (max-width : 1200px)
+			display: none
 	.section_title
 		position: relative
+		@media only screen and (max-width : 768px)
+			font-size: 45px
+		@media only screen and (max-width : 480px)
+			font-size: 35px
+		@media only screen and (max-width : 650px)
+			&:before
+				display: none
 		&:before
 			content: ""
 			position: absolute
@@ -226,7 +248,7 @@
 			background-position: center
 			background-repeat: no-repeat
 			right: -55px
-			top: 27px
+			top: 22px
 	.vote_text
 		text-align: right
 		position: relative
@@ -238,6 +260,20 @@
 				font-style: italic
 				font-size: 22px
 				margin-top: 40px
+		@media only screen and (max-width : 1200px)
+			text-align: center
+			.vote_text_wrap
+				float: none
+				width: 100%
+				background-color: #f7f7ef
+				display: inline-block
+				margin: 0 auto
+				height: auto
+				p 
+					margin-top: 0
+					float: none
+			.vote_fon
+				display: none	
 		.vote_fon
 			background-image: url("../img/vote_fon.png")
 			background-position: center
@@ -287,6 +323,9 @@
 		font-family: "PTSans", sans-serif
 		font-size: 33px
 		margin-bottom: 30px
+		&:hover
+			color: #23527c
+			text-decoration: none
 		
 
 .radio
@@ -333,6 +372,7 @@
 
 
 .recommended_pills
+	overflow: hidden
 	.recommended_pills_wrap
 		hr 
 			border-color: #373b3f
@@ -345,31 +385,35 @@
 			line-height: 33px
 
 
-
-.medicine_item
-	transition: all .3s ease
-	cursor: pointer
-	&:hover
-		.item
-			transition: all .3s ease
-			a
-				transition: .3s ease
-				text-decoration: underline
-			&:after
-				background-image: url("../img/cheked3.png")
-		.scheme
-			a
-				background-color: #de534b
-				color: #fff
-				text-shadow: 1px 2px 0px #b62d20
-				padding: 8px 0
-				border-color: #de534b
-
-
+.medicine_item_wrap
+	margin-top: 20px
+	.medicine_item
+		transition: all .3s ease
+		cursor: pointer
+		margin: 4px 0px
+		&:hover, 
+		&.active
+			.item
+				transition: all .3s ease
+				a
+					transition: .3s ease
+					text-decoration: underline
+				&:after
+					background-image: url("../img/cheked3.png")
+			.scheme
+				a
+					background-color: #de534b
+					color: #fff
+					text-shadow: 1px 2px 0px #b62d20
+					padding: 8px 0
+					border-color: #de534b
+		@media only screen and (max-width : 480px)
+			.item
+				width: 100%				
 	.item
 		transition: .3s ease
 		display: inline-block
-		width: 43%
+		width: 55%
 		position: relative
 		&:after
 			content: ""
@@ -395,8 +439,8 @@
 	.scheme
 		transition: all .3s ease
 		display: inline-block
-		width: 49%
-		text-align: center
+		width: 44%
+		text-align: right
 		a 
 			display: inline-block
 			font-family: "PTSans", sans-serif
@@ -407,15 +451,78 @@
 			width: 181px
 			text-align: center
 			padding: 8px 0
-			&:hover
-				text-decoration: none
+			text-decoration: none
 
 
-.custom_container
-	width: 1570px
-	margin-left: auto
-	// border: 1px solid black
+// .custom_container
+// 	width: 1570px
+// 	margin-left: auto
+// 	// border: 1px solid black
 	
+.medicine_text_wrap
+	margin-left: 50px
+	margin-top: 30px
+	.grey_block
+		position: relative
+		background-color: #f7f7ef
+		font-family: "Roboto", sans-serif
+		font-weight: 300
+		font-style: italic
+		font-size: 30px
+		padding: 40px 10px 40px 80px
+		@media only screen and (max-width : 991px)
+			&:before
+				display: none
+		span 
+			line-height: 48px
+		&:before
+			content: ""
+			position: absolute
+			background-image: url("../img/maman.png")
+			background-position: center
+			background-repeat: no-repeat
+			height: 308px
+			width: 100%
+			top: -128%
+		&:after
+			content: ""
+			position: absolute
+			height: 100%
+			width: 100%
+			top: 0
+			right: -100%
+			background-color: #f7f7ef	
+	.orange_block
+		position: relative
+		background-color: #f1c741
+		font-family: "PTSans", sans-serif
+		font-weight: bold
+		font-size: 35px
+		padding: 36px 56px
+		&:after
+			content: ""
+			position: absolute
+			height: 100%
+			width: 100%
+			top: 0
+			right: -100%
+			background-color: #f1c741
+	.aqua_block
+		position: relative
+		background-color: #72c6c2
+		font-family: "PTSans", sans-serif
+		font-size: 27px
+		color: #fff
+		padding: 36px 25px 36px 56px
+		&:after
+			content: ""
+			position: absolute
+			height: 100%
+			width: 100%
+			top: 0
+			right: -100%
+			background-color: #72c6c2
+
 
 
 
@@ -425,15 +532,27 @@
 	.widget_text_wrap
 		padding: 71px 0
 		position: relative
+		// 	padding: 160px
 		.widget_button
 			padding: 0px 45px
 			position: absolute
 			width: 50%
 			top: 0
 			transform: translateY(-50%)
+			@media only screen and (max-width : 1200px)
+				padding: 0px 5px
+			@media only screen and (max-width : 991px)
+				margin-top: 35px
+				transform: none
+			@media only screen and (max-width : 768px)
+				a
+					font-size: 30px
+			@media only screen and (max-width : 450px)
+				a
+					font-size: 20px
 		.main_button
 			font-family: "PTSans", sans-serif
-			font-size: 35px
+			font-size: 34px
 			// padding: 15px 126px
 			border: 2px solid #fff
 		.left_top_button	
@@ -441,6 +560,13 @@
 			a 
 				display: block
 				padding: 10px
+			@media only screen and (max-width : 991px)
+				position: relative
+				padding: 0
+				width: 100%
+				left: 0
+				a
+					bottom: 35px
 			&:hover
 				.main_button
 					text-decoration: none
@@ -449,11 +575,18 @@
 			a 
 				display: block
 				padding: 10px
+			@media only screen and (max-width : 991px)
+				position: relative
+				padding: 0
+				width: 100%
+				right: 0
+				a
+					bottom: 35px
 			&:hover
 				.main_button
 					text-decoration: none
 		&:after
-			content: ""
+			content: ""  
 		h1 
 			font-size: 55px
 			font-family: "Roboto", sans-serif
@@ -462,6 +595,10 @@
 			margin-bottom: 10px
 			margin-top: 0
 			word-wrap: break-word
+			@media only screen and (max-width : 991px)
+				line-height: 1
+				font-size: 45px
+				margin-bottom: 40px
 		.widget_social_wrap
 			font-family: "Roboto", sans-serif
 			font-weight: 500
@@ -471,6 +608,10 @@
 			flex-wrap: wrap
 			p 
 				margin: 0
+				margin-bottom: 12px
+				@media only screen and (max-width : 991px)
+					text-align: center
+
 			ul
 				margin: 0
 	.social_widget
@@ -483,6 +624,8 @@
 			li 
 				display: inline-block
 				padding-right: 10px
+				@media only screen and (max-width : 768px)
+					margin-top: 5px
 				a 
 					border: 2px solid #373b3f
 					border-radius: 50%
@@ -602,3 +745,13 @@
 						width: 50px
 						height: 50px
 						margin: auto
+
+
+
+body
+	.notice,
+	.recommended_pills,
+	.antivirus_gid,
+	.choose_medicine,
+	.main_head
+		display: none
