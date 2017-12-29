@@ -21,6 +21,7 @@
 				border-right: 1px solid #444
 
 
+
 .choose_medicine
 	padding-top: 36px
 	.main_button
@@ -28,8 +29,12 @@
 		width: 100%
 		font-size: 35px
 		padding: 14px 0
+		@media only screen and (max-width : 480px)
+			font-size: 25px
 		&:hover
 			text-decoration: none
+			background-color: #FFF
+			color: #df5c48
 
 
 
@@ -50,6 +55,19 @@
 		background-color: #fff
 		-webkit-border-radius: 150px 0 0 150px
 		border-radius: 150px 0 0 150px
+	@media only screen and (max-width : 480px)
+		flex-wrap: wrap
+		text-align: center
+		border-radius: 0
+		label
+			border-radius: 0
+			width: 100%
+			font-size: 23px
+	@media only screen and (max-width : 350px)
+		> span
+			font-size: 20px
+	
+
 
 
 
@@ -63,7 +81,8 @@
 	font-size: 21px
 	padding-left: 20px
 	transform: translateX(-0.5px)
-
+	@media only screen and (max-width : 480px)
+		margin-right: 0
 .select2-selection__clear
 	display: none
 
@@ -95,15 +114,22 @@
 	.select2-results__option
 		padding: 18px 10px
 		border-bottom: 1px solid black
+		&:last-child
+			border: none
 	.select2-results__option .select2-results__option
-		border-top: 1px solid #000
-		border-bottom: 1px solid black
+		// border-top: 1px solid #000
 		padding: 18px 10px
+
+	// .select2-results__option 
+	// 	.select2-results__option
+	// 			border-bottom: none
 	.select2-selection--single
 		.select2-selection__placeholder
 			color: #fff
 		background-color: transparent
 		border: none
+
+
 
 .select2-selection__arrow i
 	position: absolute
@@ -124,6 +150,8 @@
 	background-repeat: no-repeat
 	width: 22px
 	height: 21px
+	@media only screen and (max-width : 480px)
+		transform: translateX(-50%)
 
 
 .select2-container--default .select2-results__option[aria-selected=true]
@@ -154,6 +182,17 @@
 		font-family: "PTSans", sans-serif
 		margin-bottom: 40px
 		margin-top: 70px
+		padding: 0 10px
+		@media only screen and (max-width : 768px)
+			font-size: 35px
+			.section_title
+				font-size: 45px
+		@media only screen and (max-width : 480px)
+			font-size: 27px
+			.section_title
+				font-size: 30px
+
+
 .section_title
 	font-size: 55px
 	font-family: "PTSans", sans-serif
@@ -169,9 +208,19 @@
 	margin: 0 auto
 	margin-bottom: 48px
 	position: relative
+	@media only screen and (min-width : 992px) and (max-width: 1199px)
+		height: 460px
 	img
 		width: 100%
-	// @media only screen and (max-width : 991px)
+		@media only screen and (max-width : 991px)
+			width: auto
+		@media only screen and (max-width: 767px)
+			height: 500px
+		@media only screen and (max-width : 480px)
+			width: 70%
+			height: auto
+
+
 	.antivirus_container
 		margin-left: -15px
 		margin-right: -15px
@@ -180,19 +229,33 @@
 		max-width: 565px
 		width: 100%
 		display: inline-block
-		border: 2px solid #fff
+		border: 1px solid #fff
 		padding: 12px 15px
-		position: absolute
-		bottom: 68px
-		left: 0
-		margin: auto
-		right: 0
-
-		&:hover
-			text-decoration: none
+		// position: absolute
+		// bottom: 68px
+		// left: 0
+		// margin: auto
+		// right: 0
+		transform: translate(-31%, -50%)
+		text-decoration: none
+		@media only screen and (max-width : 1199px)
+			font-size: 30px
+		@media only screen and (max-width : 991px)
+			transform: none
+			margin-bottom: 40px
+			width: 90%
+		@media only screen and (max-width : 480px)
+			font-size: 20px
+		&:hover,
+		&:focus
+			border-color: #de534b
 	p
 		font-family: "PTSans", sans-serif
 		font-size: 35px
+		@media only screen and (max-width : 1199px)
+			font-size: 30px
+		@media only screen and (max-width : 480px)
+			font-size: 25px
 		&:first-child
 			text-transform: uppercase
 
@@ -201,7 +264,10 @@
 	max-width: 660px
 	padding: 17px 32px
 	text-align: left
-
+	@media only screen and (max-width : 991px)
+		margin: 0 auto
+	@media only screen and (max-width : 450px)
+		padding: 17px 14px
 
 
 
@@ -216,7 +282,10 @@
 		margin: 0
 		text-shadow: 1px 2px 0px #476868
 		text-align: center
-		
+		@media only screen and (max-width : 500px)
+			font-size: 28px
+		@media only screen and (max-width : 450px)
+			font-size: 23px
 .main_color
 	color: #de534b
 
@@ -234,11 +303,12 @@
 		position: relative
 		@media only screen and (max-width : 768px)
 			font-size: 45px
-		@media only screen and (max-width : 480px)
-			font-size: 35px
 		@media only screen and (max-width : 650px)
 			&:before
 				display: none
+		@media only screen and (max-width : 480px)
+			font-size: 35px
+		
 		&:before
 			content: ""
 			position: absolute
@@ -260,6 +330,13 @@
 				font-style: italic
 				font-size: 22px
 				margin-top: 40px
+				position: relative
+				z-index: 100
+				a 
+					color: #373b3f
+					&:hover,
+					&:focus
+						text-decoration: none
 		@media only screen and (max-width : 1200px)
 			text-align: center
 			.vote_text_wrap
@@ -273,7 +350,7 @@
 					margin-top: 0
 					float: none
 			.vote_fon
-				display: none	
+				display: none 
 		.vote_fon
 			background-image: url("../img/vote_fon.png")
 			background-position: center
@@ -292,8 +369,12 @@
 	background-repeat: no-repeat
 	height: 416px
 	margin-top: 44px
-	margin-left: 42px
-
+	background-size: contain
+	// margin-left: 42px
+	@media only screen and (max-width : 1200px)
+		margin-left: 0
+	@media only screen and (max-width : 767px)
+		height: 300px
 
 .main_vote_text
 	text-align: left
@@ -301,6 +382,8 @@
 	font-family: "PTSans", sans-serif
 	margin-top: 50px
 	padding-left: 18px
+	@media only screen and (max-width : 768px)
+		padding-left: 0
 	h3 
 		border-bottom: 1px solid #373b3f
 		font-weight: bold
@@ -309,22 +392,40 @@
 		padding-bottom: 18px
 		font-size: 36px
 		margin-bottom: 12px
+		@media only screen and (max-width : 768px)
+			font-size: 30px
+	@media only screen and (max-width : 768px)
+		label
+			margin-top: 30px
 	p 
 		margin: 0
 		font-size: 35px
 		line-height: 1.8
+		@media only screen and (max-width : 1289px)
+			font-size: 32px
+		@media only screen and (max-width : 991px)
+			padding-right: 50px
+		@media only screen and (max-width : 768px)
+			font-size: 25px
+		@media only screen and (max-width : 480px)
+			font-size: 20px	
 	.main_button
 		max-width: 565px
 		width: 100%
-		display: inline-block
+		display: block
 		padding: 14px 15px
 		margin-top: 33px
-		border: none
 		font-family: "PTSans", sans-serif
 		font-size: 33px
 		margin-bottom: 30px
+		@media only screen and (max-width : 1200px)
+			margin: 20px auto
+		@media only screen and (max-width : 768px)
+			font-size: 25px
+		@media only screen and (max-width : 480px)
+			font-size: 20px	
 		&:hover
-			color: #23527c
+			color: #de534b
 			text-decoration: none
 		
 
@@ -337,7 +438,7 @@
 		cursor: pointer
 	&:not(checked)
 		position: absolute
-		opacity: 0
+		opacity: 0		 
 		+ label
 			position: relative
 			display: block
@@ -350,6 +451,16 @@
 				height: 41px
 				border-radius: 50%
 				background: #de534b
+				@media only screen and (max-width : 768px)
+					width: 30px
+					height: 30px
+					top: 8px
+					right: 2px
+				@media only screen and (max-width : 480px)
+					width: 25px
+					height: 25px
+					top: 6px
+
 			&:after
 				// content: "\f00c"
 				content: ""
@@ -366,6 +477,15 @@
 				border-radius: 50%
 				opacity: 0
 				transition: all .2s
+				@media only screen and (max-width : 768px)
+					top: 15px
+					right: 4px
+				@media only screen and (max-width : 480px)
+					width: 19px
+					height: 17px
+					top: 10px
+					right: 4px
+					background-size: contain
 	&:checked + label:after
 		opacity: 1
 
@@ -383,14 +503,30 @@
 			font-family: "PTSans", sans-serif
 			font-size: 29px
 			line-height: 33px
+		@media only screen and (max-width : 768px)	
+			span
+				font-size: 45px
+		@media only screen and (max-width : 650px)
+			span
+				font-size: 40px
+		@media only screen and (max-width : 480px)
+			p
+				font-size: 25px
+			span
+				font-size: 30px
+
+
 
 
 .medicine_item_wrap
 	margin-top: 20px
+	padding-bottom: 100px
 	.medicine_item
 		transition: all .3s ease
 		cursor: pointer
-		margin: 4px 0px
+		margin: 4px 0
+		@media only screen and (max-width : 480px)
+			margin: 25px 0
 		&:hover, 
 		&.active
 			.item
@@ -409,7 +545,7 @@
 					border-color: #de534b
 		@media only screen and (max-width : 480px)
 			.item
-				width: 100%				
+				width: 100%       
 	.item
 		transition: .3s ease
 		display: inline-block
@@ -429,11 +565,14 @@
 			margin: auto
 		p
 			margin: 5px 0
-			display: inline-block
+			// display: inline-block
 			font-family: "PTSans", sans-serif
 			font-weight: bold
 			font-size: 30px
 			text-transform: uppercase
+			padding-right: 40px
+			@media only screen and (max-width : 480px)
+				font-size: 25px
 			a
 				color: #353535
 	.scheme
@@ -441,6 +580,8 @@
 		display: inline-block
 		width: 44%
 		text-align: right
+		@media only screen and (max-width : 480px)
+			text-align: left
 		a 
 			display: inline-block
 			font-family: "PTSans", sans-serif
@@ -455,13 +596,15 @@
 
 
 // .custom_container
-// 	width: 1570px
-// 	margin-left: auto
-// 	// border: 1px solid black
+//  width: 1570px
+//  margin-left: auto
+//  // border: 1px solid black
 	
 .medicine_text_wrap
 	margin-left: 50px
 	margin-top: 30px
+	@media only screen and (max-width : 991px)
+		margin-left: 0
 	.grey_block
 		position: relative
 		background-color: #f7f7ef
@@ -473,25 +616,40 @@
 		@media only screen and (max-width : 991px)
 			&:before
 				display: none
+		@media only screen and (max-width : 480px)
+			padding: 20px 20px
+			font-size: 22px		
 		span 
 			line-height: 48px
+
 		&:before
 			content: ""
 			position: absolute
 			background-image: url("../img/maman.png")
 			background-position: center
 			background-repeat: no-repeat
+			background-size: contain
 			height: 308px
 			width: 100%
 			top: -128%
+			z-index: 1
+			@media only screen and (max-width : 1290px)
+				top: -105%
+				width: 100%
+
+			@media only screen and (max-width : 1200px)
+				top: -71%
+				width: 80%
 		&:after
 			content: ""
 			position: absolute
 			height: 100%
 			width: 100%
 			top: 0
-			right: -100%
-			background-color: #f7f7ef	
+			right: -99%
+			background-color: #f7f7ef 
+			@media only screen and (max-width : 991px)
+				display: none
 	.orange_block
 		position: relative
 		background-color: #f1c741
@@ -499,40 +657,57 @@
 		font-weight: bold
 		font-size: 35px
 		padding: 36px 56px
+		@media only screen and (max-width : 480px)
+			padding: 20px 20px
+			font-size: 22px	
 		&:after
 			content: ""
 			position: absolute
 			height: 100%
 			width: 100%
 			top: 0
-			right: -100%
+			right: -99%
 			background-color: #f1c741
+			@media only screen and (max-width : 991px)
+				display: none
 	.aqua_block
 		position: relative
 		background-color: #72c6c2
 		font-family: "PTSans", sans-serif
 		font-size: 27px
 		color: #fff
-		padding: 36px 25px 36px 56px
+		padding: 36px 25px 80px 56px
+
+		@media only screen and (max-width : 480px)
+			padding: 20px 20px
+			font-size: 22px	
 		&:after
 			content: ""
 			position: absolute
 			height: 100%
 			width: 100%
 			top: 0
-			right: -100%
+			right: -99%
 			background-color: #72c6c2
+			@media only screen and (max-width : 991px)
+				display: none
 
 
-
-
+.my_row
+	margin-left: -15px
+	margin-right: -15px
+	// display: table
+	width: 100%
+	@media only screen and (max-width : 991px)
+		margin: 0
+		// padding: 0 15px
 .widget
 	background-color: #f1c741
 	// display: flex
 	.widget_text_wrap
 		padding: 71px 0
 		position: relative
-		// 	padding: 160px
+		//  padding: 160px
 		.widget_button
 			padding: 0px 45px
 			position: absolute
@@ -555,7 +730,10 @@
 			font-size: 34px
 			// padding: 15px 126px
 			border: 2px solid #fff
-		.left_top_button	
+			&:hover,
+			&:focus
+				border-color: #de534b
+		.left_top_button  
 			left: -27px
 			a 
 				display: block
@@ -597,8 +775,10 @@
 			word-wrap: break-word
 			@media only screen and (max-width : 991px)
 				line-height: 1
-				font-size: 45px
+				font-size: 35px
 				margin-bottom: 40px
+			@media only screen and (max-width : 480px)
+				font-size: 30px
 		.widget_social_wrap
 			font-family: "Roboto", sans-serif
 			font-weight: 500
@@ -606,6 +786,8 @@
 			display: flex
 			justify-content: center
 			flex-wrap: wrap
+			@media only screen and (max-width : 480px)
+				font-size: 21px
 			p 
 				margin: 0
 				margin-bottom: 12px
@@ -685,18 +867,27 @@
 	font-family: "PTSans", sans-serif
 	font-size: 20px
 	margin-top: 30px
+	@media only screen and (max-width : 650px)
+		font-size: 17px
 	.mainFooter_wrap
 		display: flex
 		align-items: center
 		flex-wrap: wrap
-		justify-content: space-between
+		justify-content: center
 		padding: 21px
+		@media only screen and (max-width : 480px)
+			div
+				margin-top: 10px
+			
 		.logo_mnz
 			background-image: url("../img/logo_MNZ.png")
 			width: 144px
 			height: 67px
 			background-size: cover
 			margin-right: 25px
+			a 
+				display: block
+				height: 100%
 		.mail
 			img
 				width: 38px
@@ -709,6 +900,8 @@
 			padding: 9px 27px
 			margin: 0 34px
 			transition: .3s ease
+			@media only screen and (max-width : 480px)
+				margin-top: 10px
 			&:hover
 				text-decoration: none
 				color: #373b3f
@@ -753,5 +946,8 @@ body
 	.recommended_pills,
 	.antivirus_gid,
 	.choose_medicine,
-	.main_head
-		display: none
+	.main_head,
+	.widget,
+	.popular_vote,
+	.mainFooter
+		display: block

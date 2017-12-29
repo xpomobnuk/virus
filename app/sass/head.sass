@@ -52,7 +52,7 @@ body
 	background-color: #fff
 	overflow-x: hidden
 	.container
-		@media only screen and (min-width : 1440px)
+		@media only screen and (min-width : 1290px)
 			width: 1270px
 
 /* === {FOOTER ALWAYS AT BOTTOM} === */
@@ -89,7 +89,7 @@ body
 	background: url("../img/logo.png") center no-repeat
 	height: 46px
 	background-size: contain
-	margin-top: 25px
+	margin: 25px auto
 	max-width: 464px
 	a
 		display: block
@@ -106,6 +106,8 @@ body
 				padding-right: 30px
 			&:last-child
 				padding-right: 20px
+				@media only screen and (max-width : 435px)
+					padding-right: 0
 			a
 				font-family: "PTSans", sans-serif
 				color: #373b3f
@@ -128,11 +130,11 @@ body
 
 .top_mnu_wrap
 	display: flex
-	justify-content: center
 	align-items: center
 	flex-wrap: wrap
-
-
+	justify-content: flex-end
+	@media only screen and (max-width : 1200px)
+		justify-content: center
 .social
 	display: inline-block
 	ul
@@ -193,20 +195,33 @@ body
 	color: #fff
 	border-radius: 50px
 	text-shadow: 1px 2px 0px #b62d20
+	// text-shadow: 1px 2px 0px black
 	font-family: "PTSans", sans-serif
 	transition: all .3s ease
 	text-align: center
+	border: 1px solid #df5c48
+	&:hover,
+	&:focus
+		text-decoration: none
+		background-color: #FFF
+		color: #df5c48
+
 
 
 
 .top_mnu_wrap
 	.main_button
 		display: inline-block
-		padding: 11px 27px
+		padding: 10px 27px
 		font-weight: bold
 		font-size: 20px
-		&:hover
+		&:hover,
+		&:focus
 			text-decoration: none
+			background-color: #FFF
+			color: #df5c48
+
+
 
 
 .header_wrap
@@ -225,6 +240,15 @@ body
 .virus
 	position: relative
 	text-align: center
+	@media only screen and (max-width : 650px)
+		&:before,
+		&:after
+			display: none
+		.mothers_choice
+			// top: -100%
+			position: relative
+			right: 0
+			top: 0
 	&:before
 		content: ""
 		position: absolute

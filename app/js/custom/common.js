@@ -1,6 +1,41 @@
 $(function() {
 
 
+
+
+// scroll to id
+
+// $(".mainFooter .mainFooter_wrap a").mPageScroll2id();
+
+
+// $('.recommended_pills .view').matchHeight();
+equalBlockHeight('#view1','#view2');
+
+
+function equalBlockHeight(id1, id2){
+	var view1, view1Height, view2, view2Height;
+
+	view1 = $(id1);
+	view2 = $(id2);
+
+	view1Height = view1.outerHeight();
+
+	view2.removeAttr('style');
+	view2Height = view2.outerHeight();
+
+
+	if(view1Height > view2Height && window.width()>992){
+
+		view2.css('height', view1Height);
+	}
+}
+
+
+
+
+
+
+
 	/*
 	*   Create vars
 	*/
@@ -55,24 +90,24 @@ $(function() {
 //  -------------------- Ajax add content in tabse -------------------------
 
 function getContent(ajaxOptions) {
-		
-        var contentArr = [
-            'В комплексной терапии полоску геля длиной не более 0,5 см наносить на предварительно подсушенную поверхность слизистой оболочки носа и/или на поверхность небных миндалин 3–5 раз в день в течение 5 суток. При необходимости курс может быть продлён. В период подъема заболеваемости полоску геля длиной не более 0,5 см наносят на предварительно подсушенную поверхность слизистой оболочки носа и/или на поверхность небных миндалин 2 раза в день в течение 2-4 недель. На слизистую оболочку носовой полости гель наносить после очищения носовых проходов. На поверхность небных миндалин – через 30 минут после принятия пищи. При нанесении геля на небные миндалины не прикасаться к миндалинам ватным тампоном, а лишь гелем, гель при этом самостоятельно стекает вниз по поверхности миндалины.',
-            'Sapiente, blanditiis. Nihil illum c.',
-            'Sapiente, blanditiis. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque.',
-            'Sapiente, blanditiis. Nihil illum commodi id distinctio.',
-            'Sapiente, blanditiis. Nihil illum commodi id distinctio provident.',
-            'Sapiente, blanditiis. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque.',
-            'Sapiente, blanditiis.  distinctio provident amet et. Voluptatibus, neque.',
-            'Sapiente,  Voluptatibus, neque.',
-            'Sapiente.'
-        ];
-    
-        return contentArr[ajaxOptions];
-    }
+
+	var contentArr = [
+	'В комплексной терапии полоску геля длиной не более 0,5 см наносить на предварительно подсушенную поверхность слизистой оболочки носа и/или на поверхность небных миндалин 3–5 раз в день в течение 5 суток. При необходимости курс может быть продлён. В период подъема заболеваемости полоску геля длиной не более 0,5 см наносят на предварительно подсушенную поверхность слизистой оболочки носа и/или на поверхность небных миндалин 2 раза в день в течение 2-4 недель. На слизистую оболочку носовой полости гель наносить после очищения носовых проходов. На поверхность небных миндалин – через 30 минут после принятия пищи. При нанесении геля на небные миндалины не прикасаться к миндалинам ватным тампоном, а лишь гелем, гель при этом самостоятельно стекает вниз по поверхности миндалины.',
+	'Sapiente, blanditiis. Nihil illum c. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque.',
+	'Sapiente, blanditiis. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque.common.jsNihil illum commodi id distinctio provident amet et. Voluptatibus, neque.',
+	'Sapiente, blanditiis. Nihil illum commodi id distinctio.Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque.',
+	'Sapiente, blanditiis. Nihil illum commodi id distinctio provident.Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque.common.jsNihil illum commodi id distinctio provident amet et. Voluptatibus, neque. ',
+	'Sapiente, blanditiis. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque.',
+	'Sapiente, blanditiis.  distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque.',
+	'Sapiente,  Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. ',
+	'Sapiente. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. Nihil illum commodi id distinctio provident amet et. Voluptatibus, neque. '
+	];
+
+	return contentArr[ajaxOptions];
+}
 
 
-    var tabsOptions = {
+var tabsOptions = {
         tabsWrap: '.medicine_item_wrap', //обертка всех табов
         tabWrap: '.medicine_item', //обертка одного таба
         tab: '.medicine_item_wrap .button', //снопка запускающаю работу таба (сам таб)
@@ -82,39 +117,63 @@ function getContent(ajaxOptions) {
         contentWrap: '.aqua_block span', //куда будет подгружаться контент
         parseContent: function (opt) {
 
-            return getContent(opt);
- 
+        	return getContent(opt);
+
         } //полученный контент
-    };
+      };
 
-    myCustomTabs(tabsOptions);
-
-
-    function myCustomTabs(options) {
+      myCustomTabs(tabsOptions);
 
 
-        if (typeof options !== 'object') {
-            console.error('Your options is not an object');
-            return false;
-        } else {
+      function myCustomTabs(options) {
 
-            /* Tab click event */
-           
 
-           $(options.tab).on("click", function (event) {
-                event.preventDefault();
+      	if (typeof options !== 'object') {
+      		console.error('Your options is not an object');
+      		return false;
+      	} else {
 
-                var curTabId, content, title, th;
+      		/* Tab click event */
 
-                th = $(this);
-                curTabId = th.data('tab-id');
 
-                content = options.parseContent(curTabId);
-                title = th.closest(options.tabWrap).find('.item a').html();
+  // -------- add scroll to id 
 
-                if (options.titleCustomTemplate) {
-                    title += options.titleCustomTemplate;
-                }
+
+  $('[data-custom-anchor]').on("click", function (event) {
+  	event.preventDefault();
+
+  	var anchor, target;
+
+  	anchor = $(this).data("custom-anchor");
+  	target = $('#'+anchor);
+
+  	if(anchor && target.length) {
+  		$('html, body').animate({
+  			scrollTop: (target.offset().top)
+  		}, 1000);
+  	}
+
+  });
+
+  // -------- END SCROLL TO ID
+
+
+  $(options.tab).on("click", function (event) {
+  	event.preventDefault();
+
+
+
+  	var curTabId, content, title, th;
+
+  	th = $(this);
+  	curTabId = th.data('tab-id');
+
+  	content = options.parseContent(curTabId);
+  	title = th.closest(options.tabWrap).find('.item a').html();
+
+  	if (options.titleCustomTemplate) {
+  		title += options.titleCustomTemplate;
+  	}
 
 
                 //remove all class active
@@ -129,12 +188,12 @@ function getContent(ajaxOptions) {
                 //set content
                 $(options.contentWrap).html(content);
 
-              
 
-            });
+                equalBlockHeight('#view1','#view2');
+              });
 
-        }
-    }
+}
+}
 
 
 
