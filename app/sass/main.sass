@@ -292,6 +292,9 @@
 
 .popular_vote
 	text-align: center
+	h1 
+		padding-left: 15px
+		padding-right: 15px
 	.vote_text_wrap2
 		width: 41%
 		background-color: #f7f7ef
@@ -308,7 +311,6 @@
 				display: none
 		@media only screen and (max-width : 480px)
 			font-size: 35px
-		
 		&:before
 			content: ""
 			position: absolute
@@ -410,6 +412,7 @@
 		@media only screen and (max-width : 480px)
 			font-size: 20px	
 	.main_button
+		outline: 0
 		max-width: 565px
 		width: 100%
 		display: block
@@ -427,6 +430,8 @@
 		&:hover
 			color: #de534b
 			text-decoration: none
+		&:focus
+			outline: 0
 		
 
 .radio
@@ -521,6 +526,10 @@
 .medicine_item_wrap
 	margin-top: 20px
 	padding-bottom: 100px
+	@media only screen and (max-width : 991px)
+		padding-bottom: 20px
+	@media only screen and (max-width : 480px)
+		padding-bottom: 5px
 	.medicine_item
 		transition: all .3s ease
 		cursor: pointer
@@ -573,6 +582,7 @@
 			padding-right: 40px
 			@media only screen and (max-width : 480px)
 				font-size: 25px
+				padding-left: 29px
 			a
 				color: #353535
 	.scheme
@@ -705,7 +715,7 @@
 	background-color: #f1c741
 	// display: flex
 	.widget_text_wrap
-		padding: 71px 0
+		padding: 71px 0 45px 0
 		position: relative
 		//  padding: 160px
 		.widget_button
@@ -719,7 +729,6 @@
 			@media only screen and (max-width : 991px)
 				margin-top: 35px
 				transform: none
-			@media only screen and (max-width : 768px)
 				a
 					font-size: 30px
 			@media only screen and (max-width : 450px)
@@ -730,6 +739,8 @@
 			font-size: 34px
 			// padding: 15px 126px
 			border: 2px solid #fff
+			@media only screen and (max-width : 480px)
+				font-size: 20px
 			&:hover,
 			&:focus
 				border-color: #de534b
@@ -743,6 +754,9 @@
 				padding: 0
 				width: 100%
 				left: 0
+				margin: 0 auto
+				margin-top: 30px
+				max-width: 565px
 				a
 					bottom: 35px
 			&:hover
@@ -754,12 +768,17 @@
 				display: block
 				padding: 10px
 			@media only screen and (max-width : 991px)
-				position: relative
-				padding: 0
-				width: 100%
+				font-size: 30px
+				position: absolute
+				margin: 0 auto
 				right: 0
+				left: 0
+				max-width: 565px
+				width: 100%
 				a
 					bottom: 35px
+			@media only screen and (max-width : 480px)
+				font-size: 20px
 			&:hover
 				.main_button
 					text-decoration: none
@@ -797,12 +816,18 @@
 			ul
 				margin: 0
 	.social_widget
-		display: inline-block
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
 		ul 
 			display: flex
 			list-style-type: none
 			padding-left: 20px
 			flex-wrap: wrap
+			@media only screen and (max-width : 991px)
+				padding: 0
+			&:last-child
+				padding-left: 0
 			li 
 				display: inline-block
 				padding-right: 10px

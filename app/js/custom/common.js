@@ -24,7 +24,7 @@ function equalBlockHeight(id1, id2){
 	view2Height = view2.outerHeight();
 
 
-	if(view1Height > view2Height && window.width()>992){
+	if(view1Height > view2Height && $(window).width() > 992){
 
 		view2.css('height', view1Height);
 	}
